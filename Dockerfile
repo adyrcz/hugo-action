@@ -21,4 +21,5 @@ RUN git clone --branch v0.90.1 https://github.com/gohugoio/hugo.git /hugo
 RUN cd /hugo; go install
 
 ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
